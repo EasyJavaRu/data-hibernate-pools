@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+        <property name="hibernate.connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property>
+        <property name="hibernate.hikari.dataSourceClassName">org.h2.jdbcx.JdbcDataSource</property>
+        <property name="hibernate.hikari.dataSource.url">jdbc:h2:mem:test</property>
+
+        <mapping class="ru.easyjava.data.hibernate.entity.Operation"/>
+    </session-factory>
+
+</hibernate-configuration>
